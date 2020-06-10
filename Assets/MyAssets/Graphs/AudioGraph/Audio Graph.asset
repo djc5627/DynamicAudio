@@ -1,0 +1,719 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8183994813818817180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -24}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -8183994813818817180}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -2009011536530554990}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -8183994813818817180}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37bbeabb1cb58b24abde63ed88c1fcac, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-8090798938206042913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -696, y: -40}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -8090798938206042913}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -8090798938206042913}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -2009011536530554990}
+        reroutePoints: []
+      - fieldName: previous
+        node: {fileID: -4954088268397068524}
+        reroutePoints: []
+      - fieldName: previous
+        node: {fileID: -6892471069914413684}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 932688e600957074b9d368f42d29fe80, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-7192273845439118911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -296, y: -664}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -7192273845439118911}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: 4607226814441372370}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -7192273845439118911}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 0}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-6892471069914413684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -280, y: -264}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -6892471069914413684}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -8090798938206042913}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -6892471069914413684}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-5338647823543760698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 216, y: 648}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -5338647823543760698}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: 3631072926347711407}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -5338647823543760698}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37bbeabb1cb58b24abde63ed88c1fcac, type: 3}
+  startClipCount: 1
+  startClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  middleClipCount: 2
+  middleClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  endClipCount: 1
+  endClips:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nextGrooves:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &-4954088268397068524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -280, y: 344}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -4954088268397068524}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -8090798938206042913}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -4954088268397068524}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 0}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-2394745253914762481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -296, y: -888}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -2394745253914762481}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: 4607226814441372370}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -2394745253914762481}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: 39859852194240803}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-2009011536530554990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -280, y: -40}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -2009011536530554990}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -8090798938206042913}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -2009011536530554990}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -8183994813818817180}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  startClipCount: 0
+  startClips:
+  - {fileID: 8300000, guid: 782091830f649fa4cad98b60ea871049, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &-184082571040651932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -792, y: 696}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: -184082571040651932}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: -184082571040651932}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: 3631072926347711407}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 932688e600957074b9d368f42d29fe80, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2f860a47495a0245a1119cfddf293f8, type: 3}
+  m_Name: Audio Graph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8090798938206042913}
+  - {fileID: -2009011536530554990}
+  - {fileID: -8183994813818817180}
+  - {fileID: -4954088268397068524}
+  - {fileID: -6892471069914413684}
+  - {fileID: 4607226814441372370}
+  - {fileID: -2394745253914762481}
+  - {fileID: 39859852194240803}
+  - {fileID: -7192273845439118911}
+  - {fileID: 3764584468988716757}
+  - {fileID: -184082571040651932}
+  - {fileID: 3631072926347711407}
+  - {fileID: -5338647823543760698}
+--- !u!114 &39859852194240803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 104, y: -872}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: 39859852194240803}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -2394745253914762481}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: 39859852194240803}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 37bbeabb1cb58b24abde63ed88c1fcac, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &3631072926347711407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -280, y: 712}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: 3631072926347711407}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: -184082571040651932}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: 3631072926347711407}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -5338647823543760698}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &3764584468988716757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -296, y: -1112}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: 3764584468988716757}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: next
+        node: {fileID: 4607226814441372370}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: 3764584468988716757}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
+--- !u!114 &4607226814441372370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Audio Clip
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -712, y: -888}
+  ports:
+    keys:
+    - previous
+    - next
+    values:
+    - _fieldName: previous
+      _node: {fileID: 4607226814441372370}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: next
+      _node: {fileID: 4607226814441372370}
+      _typeQualifiedName: AudioClipNode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previous
+        node: {fileID: -2394745253914762481}
+        reroutePoints: []
+      - fieldName: previous
+        node: {fileID: -7192273845439118911}
+        reroutePoints: []
+      - fieldName: previous
+        node: {fileID: 3764584468988716757}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  previous: {fileID: 0}
+  next: {fileID: 0}
+  clip: {fileID: 8300000, guid: 932688e600957074b9d368f42d29fe80, type: 3}
+  startClipCount: 0
+  startClips: []
+  middleClipCount: 0
+  middleClips: []
+  endClipCount: 0
+  endClips: []
+  nextGrooves: []
