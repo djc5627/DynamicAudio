@@ -10,9 +10,9 @@ public class AudioGraph : NodeGraph {
 	{
 		foreach (var node in nodes)
 		{
-			if (node is AudioClipNode audioNode)
+			if (node is Groove audioNode)
 			{
-				var previous = audioNode.GetInputValue<AudioClipNode>("previous");
+				var previous = audioNode.GetInputValue<Groove>("previous");
 				Debug.Log($"Prev is: {previous}");
 				if (previous == null)
 				{
