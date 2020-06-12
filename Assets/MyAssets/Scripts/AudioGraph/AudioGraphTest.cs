@@ -10,6 +10,6 @@ public class AudioGraphTest : MonoBehaviour
     [Button("Test")]
     public void TestGraphPlay()
     {
-        audioGraph.Start();
+        audioGraph.PlayGroove();
     }
 }

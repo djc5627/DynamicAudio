@@ -6,18 +6,15 @@ using XNode;
 
 [Serializable, CreateAssetMenu(fileName = "New Audio Graph", menuName = "Graphs/Audio Graph")]
 public class AudioGraph : NodeGraph {
-	public void Start()
+	public void PlayGroove()
 	{
 		foreach (var node in nodes)
 		{
-			if (node is Groove audioNode)
+			if (node is Groove grooveNode)
 			{
-				var previous = audioNode.GetInputValue<Groove>("previous");
-				Debug.Log($"Prev is: {previous}");
-				if (previous == null)
-				{
-					audioNode.Play();
-				}
+				//var previous = grooveNode.GetInputValue<Groove>("previous");
+				//Debug.Log($"Prev is: {previous}");
+				grooveNode.StartGroove();
 			}
 		}
 	}

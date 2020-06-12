@@ -2,41 +2,47 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AudioPlayer : MonoBehaviour
 {
     public AudioSource[] AudioSources;
-    public AudioClip[] clipArray;
+    
     public Slider audioSlider;
     public float initialDelay = 1f;
     public float scheduleAheadTime = 1f;
 
+    private AudioClip nextClip;
     private int toggle = 0;
-    private int nextClipIndex = 0;
     private double currentClipStartTime;
-    private double currentClipDuration;
     private double nextStartTime;
+    private double currentClipDuration;
+    private double nextClipDuration;
     private double currentStartTime;
+    private bool isFirstClip = true;
 
+    public delegate void OnPlayNextClip();
 
-    private void Awake()
-    {
-        nextStartTime = AudioSettings.dspTime + initialDelay;
-        currentClipStartTime = nextStartTime;
-        LeanTween.value(0f, 1f, initialDelay)
-            .setOnComplete(_ =>
-            {
-                currentClipStartTime = nextStartTime;
-            });
-    }
-
+    public event OnPlayNextClip onPlayNextClip;
+    
     private void Update()
     {
-        CheckForReloadScene();
         HandleSwitchingClips();
         UpdateSlider();
+    }
+
+    public void QueueClip(AudioClip clip)
+    {
+        nextClip = clip;
+        
+        //If first clip, do initial delay (assumes its fed clips nonstop)
+        if (isFirstClip)
+        {
+            nextStartTime = AudioSettings.dspTime + initialDelay;
+            isFirstClip = false;
+        }
+        
+        Debug.Log($"Queued Clip: {nextClip}");
     }
 
     private void HandleSwitchingClips()
@@ -44,43 +50,39 @@ public class AudioPlayer : MonoBehaviour
         //if 1 second before clip ends
         if (AudioSettings.dspTime > nextStartTime - scheduleAheadTime)
         {
-            AudioClip clipToPlay = clipArray[nextClipIndex];
-
             // Loads the next Clip to play and schedules when it will start
-            AudioSources[toggle].clip = clipToPlay;
+            AudioSources[toggle].clip = nextClip;
             AudioSources[toggle].PlayScheduled(nextStartTime);
-
-            // Checks how long the Clip will last and updates the Next Start Time with a new value
-            double duration = (double)clipToPlay.samples / clipToPlay.frequency;
-            currentStartTime = nextStartTime;
-            nextStartTime += duration;
-
+            
             // Switches the toggle to use the other Audio Source next
             toggle = 1 - toggle;
-
-            // Increase the clip index number, reset if it runs out of clips
-            nextClipIndex = nextClipIndex < clipArray.Length - 1 ? nextClipIndex + 1 : 0;
             
-            //Update start time/duration for slider
+            // Checks how long the Clip will last and updates the Next Start Time with a new value
+            nextClipDuration = (double) nextClip.samples / nextClip.frequency;
+            currentStartTime = nextStartTime;
+            nextStartTime += nextClipDuration;
+            //currentClipStartTime = nextStartTime;
+
+            Debug.Log($"Loaded Clip: {nextClip}");
+            
+            //Update start time/duration for slider (after already playing)
             LeanTween.value(0f, 1f, scheduleAheadTime)
                 .setOnComplete(_ =>
                 {
                     currentClipStartTime = currentStartTime;
-                    currentClipDuration = duration;
+                    currentClipDuration = nextClipDuration;
+                    
+                    Debug.Log($"Playing Clip: {nextClip}");
+                    
+                    //Let others know clip is switched and ready for Queue
+                    if (onPlayNextClip != null) onPlayNextClip.Invoke();
                 });
-        }
-    }
-
-    private void CheckForReloadScene()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
     private void UpdateSlider()
     {
+        if (audioSlider == null) return;
         audioSlider.value = (float) ((AudioSettings.dspTime - currentClipStartTime) / currentClipDuration);
         // Debug.Log($"-----------START------------");
         // Debug.Log($"SliderVal: {audioSlider.value}");
@@ -89,22 +91,5 @@ public class AudioPlayer : MonoBehaviour
         // Debug.Log($"Duration: {currentClipDuration}");
     }
 
-    private void OnGUI()
-    {
-        float vertSpacing = 30f;
-        float horrSpacing = 30f;
-        for (int i = 0; i < clipArray.Length; i++)
-        {
-            GUI.color = (i == nextClipIndex) ? Color.green : Color.white;
-            GUI.TextField(new Rect(10, 10 + i*vertSpacing, 200, 20),
-                clipArray[i].name);
-            if (GUI.Button(new Rect(210 + horrSpacing, 10 + i * vertSpacing, 50, 20), "+"))
-            {
-                nextClipIndex = i;
-            };
-        }
-
-        GUI.color = Color.cyan;
-        GUI.TextField(new Rect(10, 10 + clipArray.Length * vertSpacing, 250, 20), $"Next Clip: {clipArray[nextClipIndex].name}");
-    }
+    
 }

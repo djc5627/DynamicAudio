@@ -38,7 +38,7 @@ public class GrooveEditor : NodeEditor
         
         Groove node = target as Groove;
         EditorGUILayout.LabelField("Play");
-        if (GUILayout.Button("Play")) node.Play();
+        if (GUILayout.Button("Play")) node.StartGroove();
     }
     
     public override int GetWidth()

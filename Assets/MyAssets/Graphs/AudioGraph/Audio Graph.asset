@@ -18,12 +18,12 @@ MonoBehaviour:
     keys: []
     values: []
   Name: Sick Groove
-  intensity: 1
-  startClipCount: 0
+  intensity: 2
+  startPlayCount: 0
   startClips: []
-  middleClipCount: 0
+  middlePlayCount: 0
   middleClips: []
-  endClipCount: 0
+  endPlayCount: 0
   endClips: []
   nextGrooves: []
 --- !u!114 &11400000

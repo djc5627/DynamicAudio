@@ -569,16 +569,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1458954678}
+  - component: {fileID: 1458954679}
+  - component: {fileID: 1458954682}
   - component: {fileID: 1458954680}
   - component: {fileID: 1458954681}
-  - component: {fileID: 1458954679}
   m_Layer: 0
   m_Name: AudioPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1458954678
 Transform:
   m_ObjectHideFlags: 0
@@ -608,19 +609,6 @@ MonoBehaviour:
   AudioSources:
   - {fileID: 1458954680}
   - {fileID: 1458954681}
-  clipArray:
-  - {fileID: 8300000, guid: 0d1ac9a4e2bbcc34d9db0442c6a642b0, type: 3}
-  - {fileID: 8300000, guid: ff54d51ac99d1c548ab21e4f52642e70, type: 3}
-  - {fileID: 8300000, guid: b1bf25ba9f171244ebcf6fe3091ae94f, type: 3}
-  - {fileID: 8300000, guid: 932688e600957074b9d368f42d29fe80, type: 3}
-  - {fileID: 8300000, guid: 977d4192db9c08d428f03a6431ad7292, type: 3}
-  - {fileID: 8300000, guid: 5c1e736745b0b4148bfa138d5e884814, type: 3}
-  - {fileID: 8300000, guid: 0c8cc198aad4804408a86a59df9ab48a, type: 3}
-  - {fileID: 8300000, guid: 37bbeabb1cb58b24abde63ed88c1fcac, type: 3}
-  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-  - {fileID: 8300000, guid: daad862e9fcbf1a47b5c0bfc00c0c66e, type: 3}
-  - {fileID: 8300000, guid: 8e20b2d294c00ec418317a0af1d8dc88, type: 3}
-  - {fileID: 8300000, guid: 61ec43fc01756ea4fb41f3aef120076f, type: 3}
   audioSlider: {fileID: 829057156}
   initialDelay: 1
   scheduleAheadTime: 1
@@ -816,6 +804,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1458954682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458954677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66bcd63e15c51b24180e111a3f79c7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPlayer: {fileID: 1458954679}
+  clipArray:
+  - {fileID: 8300000, guid: 0d1ac9a4e2bbcc34d9db0442c6a642b0, type: 3}
+  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  - {fileID: 8300000, guid: 61ec43fc01756ea4fb41f3aef120076f, type: 3}
 --- !u!1 &1652729890
 GameObject:
   m_ObjectHideFlags: 0
