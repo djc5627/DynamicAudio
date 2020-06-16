@@ -1,15 +1,28 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 
 public class AudioGraphTest : MonoBehaviour
 {
-    public AudioGraph audioGraph;
+    [SerializeField] private AudioGraph audioGraph;
+    [SerializeField] private AudioPlayer audioPlayer;
+
+
+    private void Awake()
+    {
+        audioPlayer.onPlayNextClip += QueueNextClip;
+    }
+
+    private void Start()
+    {
+        QueueNextClip();
+    }
 
     [Button("Test")]
-    public void TestGraphPlay()
+    public void QueueNextClip()
     {
-        audioGraph.PlayGroove();
+        audioPlayer.QueueClip(audioGraph.GetNextClip());
     }
 }

@@ -61,7 +61,6 @@ public class AudioPlayer : MonoBehaviour
             nextClipDuration = (double) nextClip.samples / nextClip.frequency;
             currentStartTime = nextStartTime;
             nextStartTime += nextClipDuration;
-            //currentClipStartTime = nextStartTime;
 
             Debug.Log($"Loaded Clip: {nextClip}");
             

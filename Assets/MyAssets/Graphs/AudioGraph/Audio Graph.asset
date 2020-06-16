@@ -13,18 +13,24 @@ MonoBehaviour:
   m_Name: Groove
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -216, y: -168}
+  position: {x: -200, y: -152}
   ports:
     keys: []
     values: []
   Name: Sick Groove
   intensity: 2
-  startPlayCount: 0
-  startClips: []
-  middlePlayCount: 0
-  middleClips: []
-  endPlayCount: 0
-  endClips: []
+  startPlayCount: 2
+  startClips:
+  - {fileID: 8300000, guid: ff54d51ac99d1c548ab21e4f52642e70, type: 3}
+  - {fileID: 8300000, guid: 0d1ac9a4e2bbcc34d9db0442c6a642b0, type: 3}
+  middlePlayCount: 2
+  middleClips:
+  - {fileID: 8300000, guid: daad862e9fcbf1a47b5c0bfc00c0c66e, type: 3}
+  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  endPlayCount: 2
+  endClips:
+  - {fileID: 8300000, guid: 977d4192db9c08d428f03a6431ad7292, type: 3}
+  - {fileID: 8300000, guid: 5c1e736745b0b4148bfa138d5e884814, type: 3}
   nextGrooves: []
 --- !u!114 &11400000
 MonoBehaviour:

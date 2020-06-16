@@ -1,8 +1,11 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using XNode;
+using System.Linq;
+using Random = UnityEngine.Random;
 
 public class Groove : Node
 {
@@ -22,6 +25,9 @@ public class Groove : Node
 	private List<AudioClip> startClipsPlayed = new List<AudioClip>();
 	private List<AudioClip> middleClipsPlayed = new List<AudioClip>();
 	private List<AudioClip> endClipsPlayed = new List<AudioClip>();
+	private int currentStartCount = 0;
+	private int currentMiddleCount = 0;
+	private int currentEndCount = 0;
 
 	// Use this for initialization
 	protected override void Init() {
@@ -30,6 +36,15 @@ public class Groove : Node
 		startClipsPlayed.Clear();
 		middleClipsPlayed.Clear();
 		endClipsPlayed.Clear();
+
+		//Random sort clips
+		startClips = startClips.OrderBy(_ => Guid.NewGuid()).ToArray();
+		middleClips = middleClips.OrderBy(_ => Guid.NewGuid()).ToArray();
+		endClips = endClips.OrderBy(_ => Guid.NewGuid()).ToArray();
+
+		currentStartCount = 0;
+		currentMiddleCount = 0;
+		currentEndCount = 0;
 	}
 	
 
@@ -39,9 +54,31 @@ public class Groove : Node
 		return null;
 	}
 
-	public void StartGroove()
+	public AudioClip GetNextClip()
 	{
-		Debug.Log($"Started playing groove: {name}");
-		
+		AudioClip nextClip = null;
+		if (currentStartCount < startPlayCount)
+		{
+			nextClip = startClips[currentStartCount];
+			currentStartCount++;
+		}
+		else if (currentMiddleCount < middlePlayCount)
+		{
+			nextClip = middleClips[currentMiddleCount];
+			currentMiddleCount++;
+		}
+		else if (currentEndCount < endPlayCount)
+		{
+			nextClip = endClips[currentEndCount];
+			currentEndCount++;
+		}
+
+		return nextClip;
+	}
+
+	private AudioClip PickRandomClip(AudioClip[] clipArray)
+	{
+		int randomIndex = Random.Range(0, clipArray.Length);
+		return clipArray[randomIndex];
 	}
 }
