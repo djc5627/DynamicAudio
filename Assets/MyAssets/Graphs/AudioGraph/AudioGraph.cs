@@ -13,6 +13,7 @@ public class AudioGraph : NodeGraph
 	private void OnEnable()
 	{
 		currentGroove = GetStartGroove();
+		currentGroove.onFinishGroove += ChangeGroove;
 		Debug.Log($"Start Groove is {currentGroove}");
 	}
 
@@ -23,7 +24,7 @@ public class AudioGraph : NodeGraph
 		{
 			if (node is Groove grooveNode)
 			{
-				//var previous = grooveNode.GetInputValue<Groove>("previous");
+				//For now just picking first node in list
 				startGroove = grooveNode;
 				break;
 			}
@@ -34,5 +35,13 @@ public class AudioGraph : NodeGraph
 	public AudioClip GetNextClip()
 	{
 		return currentGroove.GetNextClip();
+	}
+
+	public void ChangeGroove(Groove nextGroove)
+	{
+		currentGroove.onFinishGroove -= ChangeGroove;
+		currentGroove = nextGroove;
+		currentGroove.onFinishGroove += ChangeGroove;
+		Debug.Log($"Next Groove is {nextGroove.name}");
 	}
 }

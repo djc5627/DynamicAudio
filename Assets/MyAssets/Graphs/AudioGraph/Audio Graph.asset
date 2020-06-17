@@ -1,5 +1,34 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6851731372071447463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Shiiiiettt
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 168, y: -152}
+  ports:
+    keys: []
+    values: []
+  GrooveName: Shiiiiettt
+  intensity: 2
+  startPlayCount: 1
+  startClips:
+  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+  middlePlayCount: 1
+  middleClips:
+  - {fileID: 8300000, guid: 423490ab1e00c394183c938a1da68c3d, type: 3}
+  endPlayCount: 0
+  endClips: []
+  nextGrooves:
+  - {fileID: -2287197822311986514}
 --- !u!114 &-2287197822311986514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,28 +39,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
-  m_Name: Groove
+  m_Name: Sick Groove
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: -152}
+  position: {x: -312, y: -152}
   ports:
     keys: []
     values: []
-  Name: Sick Groove
+  GrooveName: Sick Groove
   intensity: 2
-  startPlayCount: 2
+  startPlayCount: 1
   startClips:
   - {fileID: 8300000, guid: ff54d51ac99d1c548ab21e4f52642e70, type: 3}
-  - {fileID: 8300000, guid: 0d1ac9a4e2bbcc34d9db0442c6a642b0, type: 3}
-  middlePlayCount: 2
+  middlePlayCount: 1
   middleClips:
-  - {fileID: 8300000, guid: daad862e9fcbf1a47b5c0bfc00c0c66e, type: 3}
-  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-  endPlayCount: 2
-  endClips:
-  - {fileID: 8300000, guid: 977d4192db9c08d428f03a6431ad7292, type: 3}
-  - {fileID: 8300000, guid: 5c1e736745b0b4148bfa138d5e884814, type: 3}
-  nextGrooves: []
+  - {fileID: 8300000, guid: 786ad8d149fb6d94fad916e1669ed2f1, type: 3}
+  endPlayCount: 0
+  endClips: []
+  nextGrooves:
+  - {fileID: -6851731372071447463}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,3 +72,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -2287197822311986514}
+  - {fileID: -6851731372071447463}

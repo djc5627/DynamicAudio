@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using System;
+using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -17,7 +19,11 @@ public class GrooveEditor : NodeEditor
         // serializedObject.ApplyModifiedProperties(); goes at the end.
         serializedObject.Update();
         string[] excludes = { "m_Script", "graph", "position", "ports" };
-
+        
+        Groove node = target as Groove;
+        AudioClip currentClip = node.currentClip;
+        
+        
         // Iterate through serialized properties and draw them like the Inspector (But with ports)
         SerializedProperty iterator = serializedObject.GetIterator();
         bool enterChildren = true;
@@ -25,9 +31,40 @@ public class GrooveEditor : NodeEditor
         while (iterator.NextVisible(enterChildren)) {
             enterChildren = false;
             if (excludes.Contains(iterator.name)) continue;
+            
+            var targetObject = iterator.serializedObject.targetObject;
+            var targetObjectClassType = targetObject.GetType();
+            var field = targetObjectClassType.GetField(iterator.propertyPath);
+            if (field != null)
+            {
+                var value = field.GetValue(targetObject);
+
+                //If this field is audio clip type
+                var valueAsAudioClip = value as AudioClip[];
+                if (valueAsAudioClip != null)
+                {
+                    //Change background color if current or Queued clip
+                    if (valueAsAudioClip.Contains(node.currentClip))
+                    {
+                        GUI.backgroundColor = new Color(1f, 0f, 1f, .5f);
+                    }
+                    else if (valueAsAudioClip.Contains(node.QueuedClip))
+                    {
+                        GUI.backgroundColor = new Color(0f, 0f, 1f, .5f);
+                    }
+                    else
+                    {
+                        GUI.backgroundColor = Color.white;
+                    }
+                }
+                else
+                {
+                    GUI.backgroundColor = Color.white;
+                }
+            }
             NodeEditorGUILayout.PropertyField(iterator, true);
         }
-
+        
         // Iterate through dynamic ports and draw them in the order in which they are serialized
         foreach (XNode.NodePort dynamicPort in target.DynamicPorts) {
             if (NodeEditorGUILayout.IsDynamicPortListPort(dynamicPort)) continue;
@@ -35,10 +72,8 @@ public class GrooveEditor : NodeEditor
         }
 
         serializedObject.ApplyModifiedProperties();
-        
-        Groove node = target as Groove;
     }
-    
+
     public override int GetWidth()
     {
         return 400;
