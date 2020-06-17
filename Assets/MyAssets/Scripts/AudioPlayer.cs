@@ -74,7 +74,7 @@ public class AudioPlayer : MonoBehaviour
                     currentClipDuration = nextClipDuration;
                     
                     Debug.Log($"Playing Clip: {nextClip}");
-                    if (playingText != null) playingText.text = $"Playing:\n{nextClip.name}";
+                    if (playingText != null) playingText.text = $"Playing Clip:\n{nextClip.name}";
                     
                     //Let others know clip is switched and ready for Queue
                     if (onPlayNextClip != null) onPlayNextClip.Invoke();

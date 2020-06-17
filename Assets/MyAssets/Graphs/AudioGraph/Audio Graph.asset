@@ -73,3 +73,23 @@ MonoBehaviour:
   nodes:
   - {fileID: -2287197822311986514}
   - {fileID: -6851731372071447463}
+  - {fileID: 8737463439861551690}
+--- !u!114 &8737463439861551690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716366d3ef6a3664db735039b754d3df, type: 3}
+  m_Name: Entry Grooves
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -824, y: -136}
+  ports:
+    keys: []
+    values: []
+  startingGrooves:
+  - {fileID: -6851731372071447463}

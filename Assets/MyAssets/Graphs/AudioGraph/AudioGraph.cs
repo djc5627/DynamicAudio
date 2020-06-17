@@ -22,10 +22,12 @@ public class AudioGraph : NodeGraph
 		Groove startGroove = null;
 		foreach (var node in nodes)
 		{
-			if (node is Groove grooveNode)
+			//If its an EntryGroovesNode
+			var nodeAsEntryGroove = node as EntryGrooves;
+			if (nodeAsEntryGroove != null)
 			{
 				//For now just picking first node in list
-				startGroove = grooveNode;
+				startGroove = nodeAsEntryGroove.GetStartingGroove();
 				break;
 			}
 		}

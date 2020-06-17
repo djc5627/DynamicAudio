@@ -61,6 +61,3 @@ ProjectSettings/Packages/com.xeleh.enhancer/[Ss]ettings.asset
 # Blender automated backups
 *.blend[0-9]
 *.blend[0-9].meta
-
-#Wav audio files
-*.wav
