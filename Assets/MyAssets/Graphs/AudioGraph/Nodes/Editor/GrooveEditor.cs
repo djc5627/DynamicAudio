@@ -11,7 +11,7 @@ using XNodeEditor;
 [NodeEditor.CustomNodeEditorAttribute(typeof(Groove))]
 public class GrooveEditor : NodeEditor
 {
-    
+
     /// <summary> Draws standard field editors for all public fields </summary>
     public override void OnBodyGUI() {
         // Unity specifically requires this to save/update any serial object.
@@ -21,9 +21,7 @@ public class GrooveEditor : NodeEditor
         string[] excludes = { "m_Script", "graph", "position", "ports" };
         
         Groove node = target as Groove;
-        AudioClip currentClip = node.currentClip;
-        
-        
+
         // Iterate through serialized properties and draw them like the Inspector (But with ports)
         SerializedProperty iterator = serializedObject.GetIterator();
         bool enterChildren = true;
@@ -31,37 +29,6 @@ public class GrooveEditor : NodeEditor
         while (iterator.NextVisible(enterChildren)) {
             enterChildren = false;
             if (excludes.Contains(iterator.name)) continue;
-            
-            var targetObject = iterator.serializedObject.targetObject;
-            var targetObjectClassType = targetObject.GetType();
-            var field = targetObjectClassType.GetField(iterator.propertyPath);
-            if (field != null)
-            {
-                var value = field.GetValue(targetObject);
-
-                //If this field is audio clip type
-                var valueAsAudioClip = value as AudioClip[];
-                if (valueAsAudioClip != null)
-                {
-                    //Change background color if current or Queued clip
-                    if (valueAsAudioClip.Contains(node.currentClip))
-                    {
-                        GUI.backgroundColor = new Color(1f, 0f, 1f, .5f);
-                    }
-                    else if (valueAsAudioClip.Contains(node.QueuedClip))
-                    {
-                        GUI.backgroundColor = new Color(0f, 0f, 1f, .5f);
-                    }
-                    else
-                    {
-                        GUI.backgroundColor = Color.white;
-                    }
-                }
-                else
-                {
-                    GUI.backgroundColor = Color.white;
-                }
-            }
             NodeEditorGUILayout.PropertyField(iterator, true);
         }
         

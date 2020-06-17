@@ -24,9 +24,6 @@ public class Groove : Node
 	public AudioClip[] endClips;
 	[Header("---------------------------------------------------------------------------")]
 	public Groove[] nextGrooves;
-	
-	public AudioClip currentClip { get; private set; }
-	public AudioClip QueuedClip { get; private set; }
 
 	private List<AudioClip> startClipsPlayed = new List<AudioClip>();
 	private List<AudioClip> middleClipsPlayed = new List<AudioClip>();
@@ -56,8 +53,6 @@ public class Groove : Node
 		currentMiddleCount = 0;
 		currentEndCount = 0;
 
-		currentClip = null;
-		QueuedClip = null;
 		name = GrooveName;
 	}
 	
@@ -95,22 +90,6 @@ public class Groove : Node
 			GrooveFinished();
 		}
 
-		//If first clip of groove
-		//Set playing and Queued groove for color change in Editor
-		if (QueuedClip == null)
-		{
-			QueuedClip = nextClip;
-		}
-		else
-		{
-			currentClip = QueuedClip;
-			QueuedClip = nextClip;
-		}
-		
-		Debug.LogError($"Current: {currentClip}");
-		Debug.LogError($"Queued: {QueuedClip}");
-		
-		
 		return nextClip;
 	}
 

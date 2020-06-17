@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class AudioPlayer : MonoBehaviour
 {
     public AudioSource[] AudioSources;
     
     public Slider audioSlider;
+    public TMP_Text playingText;
     public float initialDelay = 1f;
     public float scheduleAheadTime = 1f;
 
@@ -72,6 +74,7 @@ public class AudioPlayer : MonoBehaviour
                     currentClipDuration = nextClipDuration;
                     
                     Debug.Log($"Playing Clip: {nextClip}");
+                    if (playingText != null) playingText.text = $"Playing:\n{nextClip.name}";
                     
                     //Let others know clip is switched and ready for Queue
                     if (onPlayNextClip != null) onPlayNextClip.Invoke();
