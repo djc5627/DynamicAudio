@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Shiiiiettt
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 168, y: -152}
+  position: {x: 104, y: -152}
   ports:
     keys: []
     values: []
@@ -21,12 +21,19 @@ MonoBehaviour:
   intensity: 2
   startPlayCount: 1
   startClips:
-  - {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-  middlePlayCount: 1
+  - clip: {fileID: 8300000, guid: 7e63e481b1987194293a28ef7b6a843b, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  middlePlayCount: 0
   middleClips:
-  - {fileID: 8300000, guid: 423490ab1e00c394183c938a1da68c3d, type: 3}
+  - clip: {fileID: 8300000, guid: 423490ab1e00c394183c938a1da68c3d, type: 3}
+    randomIndex: 1
+    playIndex: 0
   endPlayCount: 0
-  endClips: []
+  endClips:
+  - clip: {fileID: 8300000, guid: 423490ab1e00c394183c938a1da68c3d, type: 3}
+    randomIndex: 1
+    playIndex: 0
   nextGrooves:
   - {fileID: -2287197822311986514}
 --- !u!114 &-2287197822311986514
@@ -48,14 +55,39 @@ MonoBehaviour:
     values: []
   GrooveName: Sick Groove
   intensity: 2
-  startPlayCount: 1
+  startPlayCount: 3
   startClips:
-  - {fileID: 8300000, guid: ff54d51ac99d1c548ab21e4f52642e70, type: 3}
-  middlePlayCount: 1
+  - clip: {fileID: 8300000, guid: 977d4192db9c08d428f03a6431ad7292, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 0}
+    randomIndex: 1
+    playIndex: 1
+  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+    randomIndex: 0
+    playIndex: 2
+  middlePlayCount: 3
   middleClips:
-  - {fileID: 8300000, guid: 786ad8d149fb6d94fad916e1669ed2f1, type: 3}
+  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+    randomIndex: 1
+    playIndex: 1
+  - clip: {fileID: 8300000, guid: 0756d61ab1276a543930ff2607c00571, type: 3}
+    randomIndex: 1
+    playIndex: 2
+  - clip: {fileID: 0}
+    randomIndex: 1
+    playIndex: 0
   endPlayCount: 0
-  endClips: []
+  endClips:
+  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 0}
+    randomIndex: 1
+    playIndex: 0
+  - clip: {fileID: 0}
+    randomIndex: 1
+    playIndex: 0
   nextGrooves:
   - {fileID: -6851731372071447463}
 --- !u!114 &11400000
@@ -92,4 +124,4 @@ MonoBehaviour:
     keys: []
     values: []
   startingGrooves:
-  - {fileID: -6851731372071447463}
+  - {fileID: -2287197822311986514}

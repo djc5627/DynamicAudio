@@ -25,7 +25,7 @@ public class GrooveEditor : NodeEditor
         // Iterate through serialized properties and draw them like the Inspector (But with ports)
         SerializedProperty iterator = serializedObject.GetIterator();
         bool enterChildren = true;
-        EditorGUIUtility.labelWidth = 110;
+        EditorGUIUtility.labelWidth = 120;
         while (iterator.NextVisible(enterChildren)) {
             enterChildren = false;
             if (excludes.Contains(iterator.name)) continue;
