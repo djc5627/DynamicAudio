@@ -179,7 +179,7 @@ public class Groove : Node
 		}
 		
 		//Debug.
-		SortClips();
+		//SortClips();
 	}
 
 	private AudioClip PickRandomClip(AudioClip[] clipArray)

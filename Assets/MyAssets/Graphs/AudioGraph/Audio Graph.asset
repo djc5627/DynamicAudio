@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: Sick Groove
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -312, y: -152}
+  position: {x: -344, y: -152}
   ports:
     keys: []
     values: []
@@ -57,14 +57,14 @@ MonoBehaviour:
   intensity: 2
   startPlayCount: 3
   startClips:
-  - clip: {fileID: 8300000, guid: 37bbeabb1cb58b24abde63ed88c1fcac, type: 3}
-    randomIndex: 0
+  - clip: {fileID: 0}
+    randomIndex: 1
     playIndex: 0
   - clip: {fileID: 8300000, guid: bc8445cb0f3d6e5449d5727f5c19d79e, type: 3}
     randomIndex: 0
     playIndex: 1
   - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-    randomIndex: 0
+    randomIndex: 1
     playIndex: 2
   middlePlayCount: 2
   middleClips:
@@ -79,12 +79,12 @@ MonoBehaviour:
   - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
     randomIndex: 1
     playIndex: 0
-  - clip: {fileID: 8300000, guid: d7fb302a9c007224b8ba84229cb7e1af, type: 3}
-    randomIndex: 0
-    playIndex: 1
   - clip: {fileID: 8300000, guid: 786ad8d149fb6d94fad916e1669ed2f1, type: 3}
     randomIndex: 1
     playIndex: 2
+  - clip: {fileID: 8300000, guid: d7fb302a9c007224b8ba84229cb7e1af, type: 3}
+    randomIndex: 1
+    playIndex: 1
   nextGrooves:
   - {fileID: -6851731372071447463}
 --- !u!114 &11400000
