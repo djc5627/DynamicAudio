@@ -158,6 +158,14 @@ public class Groove : Node
 		//Dont let Play Index out of bounds
 		for (int i = 0; i < startClips.Length; i++)
 		{
+			if (startClips[i].randomIndex)
+			{
+				startClips[i].playIndex = -1;
+			}
+			else if (startClips[i].playIndex < 0)
+			{
+				startClips[i].playIndex = 0;
+			}
 			if (startClips[i].playIndex >= startPlayCount)
 			{
 				startClips[i].playIndex = startPlayCount;
@@ -165,6 +173,14 @@ public class Groove : Node
 		}
 		for (int i = 0; i < middleClips.Length; i++)
 		{
+			if (middleClips[i].randomIndex)
+			{
+				middleClips[i].playIndex = -1;
+			}
+			else if (middleClips[i].playIndex < 0)
+			{
+				middleClips[i].playIndex = 0;
+			}
 			if (middleClips[i].playIndex >= middlePlayCount)
 			{
 				middleClips[i].playIndex = middlePlayCount;
@@ -172,6 +188,14 @@ public class Groove : Node
 		}
 		for (int i = 0; i < endClips.Length; i++)
 		{
+			if (endClips[i].randomIndex)
+			{
+				endClips[i].playIndex = -1;
+			}
+			else if (endClips[i].playIndex < 0)
+			{
+				endClips[i].playIndex = 0;
+			}
 			if (endClips[i].playIndex >= endPlayCount)
 			{
 				endClips[i].playIndex = endPlayCount;
