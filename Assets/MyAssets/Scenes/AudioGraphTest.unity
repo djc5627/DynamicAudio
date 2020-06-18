@@ -350,7 +350,8 @@ MonoBehaviour:
   audioSlider: {fileID: 1585402489}
   playingText: {fileID: 1457530093}
   initialDelay: 1
-  scheduleAheadTime: 1
+  scheduleAheadTime: 2
+  clipTailDuration: 1
 --- !u!4 &251117372
 Transform:
   m_ObjectHideFlags: 0

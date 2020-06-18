@@ -13,6 +13,7 @@ public class AudioPlayer : MonoBehaviour
     public TMP_Text playingText;
     public float initialDelay = 1f;
     public float scheduleAheadTime = 1f;
+    public float clipTailDuration = 0f;
 
     private AudioClip nextClip;
     private int toggle = 0;
@@ -63,6 +64,7 @@ public class AudioPlayer : MonoBehaviour
             nextClipDuration = (double) nextClip.samples / nextClip.frequency;
             currentStartTime = nextStartTime;
             nextStartTime += nextClipDuration;
+            nextStartTime -= clipTailDuration;
 
             Debug.Log($"Loaded Clip: {nextClip}");
             
