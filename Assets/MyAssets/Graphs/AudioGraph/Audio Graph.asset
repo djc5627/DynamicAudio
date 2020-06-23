@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7040127439184130951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Dark Groove
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -440, y: -1272}
+  ports:
+    keys: []
+    values: []
+  GrooveName: Dark Groove
+  intensity: 3
+  startPlayCount: 1
+  startClips:
+  - clip: {fileID: 8300000, guid: 12b3f9c3f765b454abd56c28dae3f479, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  middlePlayCount: 2
+  middleClips:
+  - clip: {fileID: 8300000, guid: 9f5309c71bee3894f8a906c3ae4c1cbc, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: c516418a82ff89444b275d283ab962d8, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  endPlayCount: 0
+  endClips: []
+  nextGrooves:
+  - {fileID: -6425167210947373096}
+  - {fileID: -6138430688438740170}
+  - {fileID: 7352836366394240008}
+  - {fileID: -6851731372071447463}
 --- !u!114 &-6851731372071447463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,23 +49,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
-  m_Name: Shiiiiettt
+  m_Name: Call and Response Groove
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 104, y: -152}
+  position: {x: -1784, y: -1480}
   ports:
     keys: []
     values: []
-  GrooveName: Shiiiiettt
+  GrooveName: Call and Response Groove
   intensity: 2
   startPlayCount: 1
   startClips:
-  - clip: {fileID: 8300000, guid: 7e63e481b1987194293a28ef7b6a843b, type: 3}
+  - clip: {fileID: 8300000, guid: 5a1182a4ee101e24ca68e5311a616bdf, type: 3}
     randomIndex: 1
     playIndex: 0
-  middlePlayCount: 0
+  middlePlayCount: 4
   middleClips:
-  - clip: {fileID: 8300000, guid: 423490ab1e00c394183c938a1da68c3d, type: 3}
+  - clip: {fileID: 8300000, guid: a4dbca6d236efcc429d37044ba1ea24a, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 8a30cade2c48e654b9d21ca45c1278de, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: ef976dd23fbc3174e863a785d88dcf9b, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 2d4067b2fcb0d38499d8ad05f43a7770, type: 3}
     randomIndex: 1
     playIndex: 0
   endPlayCount: 0
@@ -35,7 +83,151 @@ MonoBehaviour:
     randomIndex: 1
     playIndex: 0
   nextGrooves:
+  - {fileID: -6425167210947373096}
   - {fileID: -2287197822311986514}
+  - {fileID: -7040127439184130951}
+  - {fileID: -2419597507227184349}
+--- !u!114 &-6425167210947373096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Chill Sad
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2696, y: -1464}
+  ports:
+    keys: []
+    values: []
+  GrooveName: Chill Sad
+  intensity: 1
+  startPlayCount: 1
+  startClips:
+  - clip: {fileID: 8300000, guid: 2b2b86222169a8144a30d520cad4fca1, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  middlePlayCount: 3
+  middleClips:
+  - clip: {fileID: 8300000, guid: c920dddf5a4d6be4c9b313c288921a4c, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 5800d88c1d7e16948b2735bead96acbf, type: 3}
+    randomIndex: 0
+    playIndex: 1
+  - clip: {fileID: 8300000, guid: c920dddf5a4d6be4c9b313c288921a4c, type: 3}
+    randomIndex: 0
+    playIndex: 2
+  endPlayCount: 1
+  endClips:
+  - clip: {fileID: 8300000, guid: aafafe2d274b2204b82d4b4d423263ef, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  nextGrooves:
+  - {fileID: -6851731372071447463}
+  - {fileID: -2287197822311986514}
+  - {fileID: 7352836366394240008}
+  - {fileID: -6138430688438740170}
+  - {fileID: -2419597507227184349}
+--- !u!114 &-6138430688438740170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: 130FunkyDrums
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8, y: -1288}
+  ports:
+    keys: []
+    values: []
+  GrooveName: 130FunkyDrums
+  intensity: 2
+  startPlayCount: 1
+  startClips:
+  - clip: {fileID: 8300000, guid: e70f979a1341ae94e9671eed0b6e03f7, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  middlePlayCount: 4
+  middleClips:
+  - clip: {fileID: 8300000, guid: 059c7918d3774244db7487e6a2dc405b, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: da0dbf792883fe248be768ef897f7530, type: 3}
+    randomIndex: 1
+    playIndex: 3
+  - clip: {fileID: 8300000, guid: e4f4356a0d2643d47a62c62a8ec15910, type: 3}
+    randomIndex: 1
+    playIndex: 1
+  - clip: {fileID: 8300000, guid: 2aafe82fc3177934e950fa75eb4cbb6a, type: 3}
+    randomIndex: 1
+    playIndex: 2
+  endPlayCount: 1
+  endClips:
+  - clip: {fileID: 8300000, guid: c29aaeedcbd4d0748bcdae4fac514833, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  nextGrooves:
+  - {fileID: -6851731372071447463}
+  - {fileID: -6425167210947373096}
+  - {fileID: -7040127439184130951}
+  - {fileID: -2287197822311986514}
+  - {fileID: 7352836366394240008}
+--- !u!114 &-2419597507227184349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: Drop Slaom
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -2248, y: -1464}
+  ports:
+    keys: []
+    values: []
+  GrooveName: Drop Slaom
+  intensity: 3
+  startPlayCount: 1
+  startClips:
+  - clip: {fileID: 8300000, guid: 741d9b69b7be8234e9a9db084f587fdb, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  middlePlayCount: 3
+  middleClips:
+  - clip: {fileID: 8300000, guid: bb27b66045ac28e4bbb609236667981a, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 759ea79d37200f34690cbf0bdf770f87, type: 3}
+    randomIndex: 1
+    playIndex: 2
+  - clip: {fileID: 8300000, guid: 337b9d5844f6e6940aa6719d12daf860, type: 3}
+    randomIndex: 1
+    playIndex: 1
+  endPlayCount: 1
+  endClips:
+  - clip: {fileID: 8300000, guid: 6621d8a12c424c9408fb576b972c8f5f, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  nextGrooves:
+  - {fileID: -6851731372071447463}
+  - {fileID: -2287197822311986514}
+  - {fileID: 7352836366394240008}
+  - {fileID: -6138430688438740170}
+  - {fileID: -6425167210947373096}
 --- !u!114 &-2287197822311986514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,44 +241,38 @@ MonoBehaviour:
   m_Name: Sick Groove
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -344, y: -152}
+  position: {x: -1352, y: -1448}
   ports:
     keys: []
     values: []
   GrooveName: Sick Groove
-  intensity: 2
-  startPlayCount: 3
+  intensity: 3
+  startPlayCount: 1
   startClips:
-  - clip: {fileID: 0}
-    randomIndex: 1
+  - clip: {fileID: 8300000, guid: d42734340280fe34b82910ef6240894b, type: 3}
+    randomIndex: 0
     playIndex: 0
-  - clip: {fileID: 8300000, guid: bc8445cb0f3d6e5449d5727f5c19d79e, type: 3}
+  middlePlayCount: 4
+  middleClips:
+  - clip: {fileID: 8300000, guid: 84889ba246dc4904f8e656ba6bca9aa3, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 2755463806636a447bac3831e78e7c5c, type: 3}
     randomIndex: 0
     playIndex: 1
-  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-    randomIndex: 1
+  - clip: {fileID: 8300000, guid: 6a1e4ac932750c346988047de261310b, type: 3}
+    randomIndex: 0
     playIndex: 2
-  middlePlayCount: 2
-  middleClips:
-  - clip: {fileID: 8300000, guid: 932688e600957074b9d368f42d29fe80, type: 3}
-    randomIndex: 1
-    playIndex: 0
-  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-    randomIndex: 1
-    playIndex: 1
-  endPlayCount: 3
-  endClips:
-  - clip: {fileID: 8300000, guid: 5b8f2ca6066215c44b33909027ee7cf6, type: 3}
-    randomIndex: 1
-    playIndex: 0
-  - clip: {fileID: 8300000, guid: 786ad8d149fb6d94fad916e1669ed2f1, type: 3}
-    randomIndex: 1
-    playIndex: 2
-  - clip: {fileID: 8300000, guid: d7fb302a9c007224b8ba84229cb7e1af, type: 3}
-    randomIndex: 1
-    playIndex: 1
+  - clip: {fileID: 8300000, guid: 13e4fc2fa47fb0547b6d643cf39a0db4, type: 3}
+    randomIndex: 0
+    playIndex: 3
+  endPlayCount: 0
+  endClips: []
   nextGrooves:
   - {fileID: -6851731372071447463}
+  - {fileID: -6425167210947373096}
+  - {fileID: -7040127439184130951}
+  - {fileID: -2419597507227184349}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -103,6 +289,59 @@ MonoBehaviour:
   - {fileID: -2287197822311986514}
   - {fileID: -6851731372071447463}
   - {fileID: 8737463439861551690}
+  - {fileID: -6425167210947373096}
+  - {fileID: -7040127439184130951}
+  - {fileID: -6138430688438740170}
+  - {fileID: 7352836366394240008}
+  - {fileID: -2419597507227184349}
+--- !u!114 &7352836366394240008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f992f6709ea7d414690e4b2ebf3420db, type: 3}
+  m_Name: 130EpicMelody
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 456, y: -1304}
+  ports:
+    keys: []
+    values: []
+  GrooveName: 130EpicMelody
+  intensity: 1
+  startPlayCount: 1
+  startClips:
+  - clip: {fileID: 8300000, guid: a048c51a8cf3c004691cb1debcbc9a62, type: 3}
+    randomIndex: 1
+    playIndex: 0
+  middlePlayCount: 4
+  middleClips:
+  - clip: {fileID: 8300000, guid: 34e53d3d761bb2e41ae03d1e9424a0ab, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  - clip: {fileID: 8300000, guid: 00bf9b3d29134834e803a551f85a4c5c, type: 3}
+    randomIndex: 0
+    playIndex: 1
+  - clip: {fileID: 8300000, guid: fa1e8d12facdcb6478972fc46c11b019, type: 3}
+    randomIndex: 0
+    playIndex: 2
+  - clip: {fileID: 8300000, guid: 34e53d3d761bb2e41ae03d1e9424a0ab, type: 3}
+    randomIndex: 0
+    playIndex: 3
+  endPlayCount: 1
+  endClips:
+  - clip: {fileID: 8300000, guid: 5bcf8d08bbe48d94bb876f14bc56a71c, type: 3}
+    randomIndex: 0
+    playIndex: 0
+  nextGrooves:
+  - {fileID: -6851731372071447463}
+  - {fileID: -6138430688438740170}
+  - {fileID: -7040127439184130951}
+  - {fileID: -2287197822311986514}
 --- !u!114 &8737463439861551690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +355,9 @@ MonoBehaviour:
   m_Name: Entry Grooves
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -824, y: -136}
+  position: {x: -2200, y: -1592}
   ports:
     keys: []
     values: []
   startingGrooves:
-  - {fileID: -2287197822311986514}
+  - {fileID: -2419597507227184349}
